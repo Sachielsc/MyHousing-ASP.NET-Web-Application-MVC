@@ -1,0 +1,144 @@
+﻿@model MyHousing.Models.HouseState
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>HouseState</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HouseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HouseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HouseType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HouseType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Postcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Postcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suburb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bedroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bedroom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bathroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bathroom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarparkOk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarparkOk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PetOk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PetOk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnMarktetFlg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnMarktetFlg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

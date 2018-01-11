@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HouseStatesController.cs" />
     <Compile Include="DAL\MyHousingContext.cs" />
     <Compile Include="DAL\MyHousingInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -210,6 +211,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\HouseStates\Create.cshtml" />
+    <Content Include="Views\HouseStates\Delete.cshtml" />
+    <Content Include="Views\HouseStates\Details.cshtml" />
+    <Content Include="Views\HouseStates\Edit.cshtml" />
+    <Content Include="Views\HouseStates\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

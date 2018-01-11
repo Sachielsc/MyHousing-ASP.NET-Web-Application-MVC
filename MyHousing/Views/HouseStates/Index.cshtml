@@ -1,0 +1,117 @@
+﻿@model IEnumerable<MyHousing.Models.HouseState>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Postcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MainAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Suburb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Region)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bedroom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bathroom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarparkOk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PetOk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OnMarktetFlg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HouseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HouseType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Postcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MainAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Suburb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Region)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bedroom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bathroom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarparkOk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PetOk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OnMarktetFlg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HouseStateId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HouseStateId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HouseStateId })
+        </td>
+    </tr>
+}
+
+</table>
