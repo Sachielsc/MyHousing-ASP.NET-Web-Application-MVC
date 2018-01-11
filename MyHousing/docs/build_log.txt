@@ -1,0 +1,71 @@
+﻿5th Jan, 2018
+
+### Download SQL Server 2017 for Windows ###
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+
+### Download SQL Server Management Studio 17.4 ###
+https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+
+### visual studio - create the project ###
+new -> screenshot 1
+
+### visual studio - database ###
+tools->connect to database->Microsoft sql server->server name: myhousingdbserver.database.windows.net; Authentication: SQL Server Authentication; User Name: Kaii, Password: Passw0rd (Need IP Address approved here); ->screenshot 2
+
+### visual studio - model ###
+model -> add-> new item -> ado.net entity data model-> EF design ->next -> yes -> 6.x -> tables -> rebuild
+
+### visual studio - view & controller ###
+controller -> add -> controller ->mvc 5 with views using entity ->screenshot 3
+
+
+
+### install font-awesome ###
+### https://www.nuget.org/packages/font-awesome/
+PM> Install-Package font-awesome -Version 4.7.0
+
+### jQuery ###
+https://www.nuget.org/packages/jQuery/
+PM> Install-Package jQuery -Version 3.2.1
+
+### jQuery.UI ###
+https://www.nuget.org/packages/jQuery.UI/
+PM> Install-Package jQuery.UI -Version 1.12.1.1
+
+### [javascript] declare 2-d array list ###
+	var counter = 3;
+	var SelectedDates = new Array(counter);
+	for (var i = 0; i < counter; i++) {
+	SelectedDates[i] = new Array(2);
+	}
+
+### [javascript] decode Json date data to date object ###
+var bookedDates = [ {"id":1,"start":"\/Date(1238540400000)\/"}, {"id":2,"start":"\/Date(1238626800000)\/"} ];
+var endDate = new Date(bookedDates[i][1].start.match(/\d+/)[0] * 1);
+
+### [javascript] Encode object list into Json array ###
+var dateList = @Html.Raw(Json.Encode(Model.bookingList));
+
+### start code first migration from an existing model - model (code first) ###
+model -> add-> new item -> ado.net entity data model-> code first from data base ->next -> yes -> 6.x -> tables -> PM> enable-migrations -> PM> add-migration InitalModel -IgnoreChanges -Force -> PM> Update-Database
+
+### install Spatial types and functions for MS SQL Server for geography data
+PM> Install-Package Microsoft.SqlServer.Types
+PM> UnInstall-Package Microsoft.SqlServer.Types
+
+### Visual Studio, rebuilt error of can not copy files to bin folder
+stop processes [VBCScompiler] & [WEB.HOST]
+
+### Geography data update
+UPDATE mytable SET gps=geography::STPointFromText('POINT(' + lng + ' ' + lat + ')', 4326) 
+UPDATE rent_house SET map_coodinate=sys.geography::STPointFromText('POINT(174.7648036 -36.8894622)', 4326) 
+----------------
+DECLARE @latitude DECIMAL(15,6)
+    ,@longitude DECIMAL(15,6);
+
+SET @latitude = 29.938580;
+SET @longitude = -81.337384;
+
+UPDATE Properties
+SET Geog = GEOGRAPHY::Point(@longitude, @latitude, 4326)
+WHERE PropertyID = 858;
