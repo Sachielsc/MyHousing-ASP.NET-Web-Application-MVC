@@ -11,6 +11,7 @@ namespace MyHousing.Models
     {
         // Primary key
         [Display(Name = "HouseStateId (Manual Generated)")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int HouseStateId { get; set; }
 
         public string HouseName { get; set; }
