@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.HouseName)
+            @Html.DisplayNameFor(model => model.HouseStateId)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.HouseType)
@@ -36,33 +36,16 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Bedroom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Bathroom)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.CarparkOk)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PetOk)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OnMarktetFlg)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Latitude)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Longitude)
-        </th>
+
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.HouseName)
+            @Html.DisplayFor(modelItem => item.HouseStateId)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.HouseType)
@@ -86,25 +69,7 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Bedroom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Bathroom)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.CarparkOk)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PetOk)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OnMarktetFlg)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Latitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Longitude)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.HouseStateId }) |
